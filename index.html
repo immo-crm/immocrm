@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoCRM - Free Real Estate Salesforce Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll(`.content-${lang}`).forEach(el => el.classList.remove('hidden'));
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => switchLanguage('en'));
+
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            document.getElementById('success-message').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">ImmoCRM</div>
+            <div>
+                <select onchange="switchLanguage(this.value)" class="border rounded px-2 py-1">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="content content-en">
+                <h1 class="text-4xl font-bold">Free Real Estate Salesforce Solution</h1>
+                <p class="mt-4 text-xl">Manage your real estate business efficiently and effortlessly.</p>
+                <button onclick="scrollToContact()" class="mt-8 bg-white text-blue-600 px-4 py-2 rounded shadow hover:bg-gray-200">Get Started for Free</button>
+            </div>
+            <div class="content content-de hidden">
+                <h1 class="text-4xl font-bold">Kostenlose Salesforce-Lösung für Immobilien</h1>
+                <p class="mt-4 text-xl">Verwalten Sie Ihr Immobiliengeschäft effizient und mühelos.</p>
+                <button onclick="scrollToContact()" class="mt-8 bg-white text-blue-600 px-4 py-2 rounded shadow hover:bg-gray-200">Kostenlos loslegen</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="content content-en">
+                <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Lead Management</h3>
+                        <p class="text-gray-700">Description of lead management features.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Property Listings</h3>
+                        <p class="text-gray-700">Details on managing property listings.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Client Communication</h3>
+                        <p class="text-gray-700">Tools for effective communication with clients.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Analytics and Reporting</h3>
+                        <p class="text-gray-700">Features for tracking performance and generating reports.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Integration</h3>
+                        <p class="text-gray-700">Information on integrating with other tools and platforms.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content content-de hidden">
+                <h2 class="text-3xl font-bold text-center mb-12">Eigenschaften</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Lead-Management</h3>
+                        <p class="text-gray-700">Beschreibung der Lead-Management-Funktionen.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Immobilienangebote</h3>
+                        <p class="text-gray-700">Details zur Verwaltung von Immobilienangeboten.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Kundenkommunikation</h3>
+                        <p class="text-gray-700">Tools für die effektive Kommunikation mit Kunden.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Analysen und Berichte</h3>
+                        <p class="text-gray-700">Funktionen zur Leistungserfassung und Berichtserstellung.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-2">Integration</h3>
+                        <p class="text-gray-700">Informationen zur Integration mit anderen Tools und Plattformen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="content content-en">
+                <h2 class="text-3xl font-bold text-center mb-12">About Our Salesforce Solution</h2>
+                <div class="text-gray-700 space-y-4">
+                    <p>A brief introduction to the Salesforce solution, its purpose, and benefits.</p>
+                    <p>Emphasize that the solution is available for free and highlight any limitations or conditions.</p>
+                    <p>Explain who can benefit from the solution, such as real estate agents, agencies, and property managers.</p>
+                    <p>Highlight what makes this Salesforce solution stand out from competitors.</p>
+                </div>
+            </div>
+            <div class="content content-de hidden">
+                <h2 class="text-3xl font-bold text-center mb-12">Über unsere Salesforce-Lösung</h2>
+                <div class="text-gray-700 space-y-4">
+                    <p>Eine kurze Einführung in die Salesforce-Lösung, ihren Zweck und ihre Vorteile.</p>
+                    <p>Betonen Sie, dass die Lösung kostenlos verfügbar ist, und heben Sie eventuelle Einschränkungen oder Bedingungen hervor.</p>
+                    <p>Erklären Sie, wer von der Lösung profitieren kann, wie z. B. Immobilienmakler, Agenturen und Hausverwalter.</p>
+                    <p>Heben Sie hervor, was diese Salesforce-Lösung von der Konkurrenz abhebt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="content content-en">
+                <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+                <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow" onsubmit="showSuccessMessage(event)">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" name="message" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+                </form>
+                <div class="mt-8 text-center text-gray-700">
+                    <p>Email: <a href="mailto:info@company.com" class="text-blue-600">info@company.com</a></p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Main Street, City, Country</p>
+                </div>
+                <div id="success-message" class="hidden mt-4 text-green-600 text-center">
+                    Thank you! We will contact you shortly.
+                </div>
+            </div>
+            <div class="content content-de hidden">
+                <h2 class="text-3xl font-bold text-center mb-12">Kontaktieren Sie uns</h2>
+                <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow" onsubmit="showSuccessMessage(event)">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">E-Mail</label>
+                        <input type="email" id="email" name="email" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Nachricht</label>
+                        <textarea id="message" name="message" class="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Absenden</button>
+                </form>
+                <div class="mt-8 text-center text-gray-700">
+                    <p>Email: <a href="mailto:info@company.com" class="text-blue-600">info@company.com</a></p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Main Street, City, Country</p>
+                </div>
+                <div id="success-message" class="hidden mt-4 text-green-600 text-center">
+                    Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-6 mt-12">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Terms of Service</a></li>
+            </ul>
+            <div class="space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Facebook</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Twitter</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">LinkedIn</a>
+            </div>
+            <p class="text-gray-600">&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
